@@ -18,6 +18,9 @@ npm run dev
 
 > ### [koa-grace是什么，如何使用？点我查看](https://github.com/xiongwilee/koa-grace)
 
+## Page Usage
+![Page Usage](http://7xrhcw.com1.z0.glb.clouddn.com/QQ20161225-040833.gif)
+
 
 ## THANKS
  
