@@ -1,0 +1,273 @@
+@html-bg-color: #f4f4f4;
+
+html, body{
+	background: @html-bg-color;
+}
+
+img{
+    max-width: 100%;
+}
+
+#demo{
+	.logo{
+		display: block;
+		width: 200px;
+		margin: 0 auto;
+	}
+	p{
+		padding: 0 1.5em;
+	}
+}
+
+// Variables
+// 颜色
+@m-red-base:                #FF6666;
+@m-red-dark:                #F55555;
+
+@m-orange-base:             #FF951A;
+@m-orange-dark:             #EE8000;
+
+@m-blue-base:               #46AAFA;
+@m-blue-dark:               #3F91D5;
+
+@m-green-base:              #00D287;
+// @m-green-dark:               #3F91D5;
+
+@m-gray-33:                 #333;
+@m-gray-66:                 #666;
+@m-gray-99:                 #999;
+@m-gray-bb:                 #bbb;
+@m-gray-cc:                 #ccc;
+@m-gray-dd:                 #ddd;
+@m-gray-e5:                 #e5e5e5;    // 边框色
+@m-gray-f5:                 #f5f5f5;
+@m-gray-fa:                 #fafafa;
+
+//组件特殊色
+@m-gray-nav:                #3B495C;
+@m-gray-tip:                #FFFCEE;
+
+@m-white:                   #FFF;
+@m-black:                   #000;
+@m-transparent:             transparent;
+
+// 字体颜色规范
+@m-font-dark:               @m-gray-33;
+@m-font-base:               @m-gray-66;
+@m-font-light:              @m-gray-99;
+@m-font-active:             @m-red-base;
+
+@m-font-size-base:          14px;
+@m-line-height-base:        1.5;
+
+// Disabled cursor
+@cursor-default:            default;
+@cursor-disabled:           not-allowed;
+@cursor-pointer:            pointer;
+
+
+
+
+// forms
+@m-forms-bd:                @m-gray-e5;
+@m-forms-bg:                @m-white;
+@m-forms-focus-color:       @m-blue-base;
+@m-forms-error-color:       @m-red-base;
+@m-forms-height-base:       28px;
+@m-forms-lh-base:           1.5;
+@m-forms-linespace-base:    20px;
+
+@m-forms-color-disabled:    @m-gray-bb;
+@m-forms-cursor-disabled:   @cursor-disabled;
+
+@m-forms-font-light:        @m-font-light;
+@m-forms-font-dark:         @m-font-dark;
+@m-forms-font-active:       @m-font-active;
+@m-placeholder-color:       @m-gray-99;
+
+// radio & checkbox
+@m-selected-color:          @m-blue-base;
+@m-unselected-color:        #C9C9C9;
+
+// input
+@m-input-width:             160px;
+@m-input-height:            @m-forms-height-base;
+@m-input-padding:           0 5px;
+@m-input-fontsize:          @m-font-size-base;
+@m-input-color:             @m-gray-33;
+@m-input-radius:            2px;
+
+// select
+@m-select-bg:               @m-forms-bg;
+
+// textarea
+@m-textarea-amount-color:   @m-gray-99;
+@m-textarea-amount-empty-color: @m-gray-cc;
+
+// chrome自动填充颜色fix
+input:-webkit-autofill, 
+select:-webkit-autofill,
+textarea:-webkit-autofill{
+    &, &:focus{
+        -webkit-box-shadow: 0 0 0 50px #fff inset;
+    }
+}
+
+.input:hover,
+input:focus,
+textarea:focus{
+    border-color: #46AAFA;
+    box-shadow: 0 0 2px rgba(70, 170, 250, 0.6);
+}
+
+.input,
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+select{
+    min-width: @m-input-width;
+    height: @m-input-height;
+    padding: @m-input-padding; 
+    line-height: @m-input-height;
+
+    font-size: @m-input-fontsize;
+    color: @m-input-color; 
+    
+    border-radius: @m-input-radius;
+
+}
+
+input,.input,
+select,
+textarea{
+    border: 1px solid @m-forms-bd;
+    background: #fff;
+    outline: none !important;
+
+    &.error{
+        border-color: @m-forms-error-color;
+        box-shadow: 0 0 2px rgba(255, 102, 102, 0.6);
+    }
+    
+    &[disabled],
+    html &[disabled],
+    fieldset[disabled] & {
+        color: @m-forms-color-disabled;
+        background-color: #fff;
+        border-color: @m-forms-bd;
+
+        cursor: @m-forms-cursor-disabled;
+        opacity: 1; // iOS fix for unreadable disabled content
+    }
+
+    // fix: FF 红边框:非法值
+    &:invalid,
+    &:-moz-submit-invalid,
+    &:-moz-ui-invalid{
+        // -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    // &:required{box-shadow: 1px 1px 1px red;}
+    &:-moz-placeholder,
+    &:-ms-input-placeholder{
+        color: @m-placeholder-color;
+    }
+
+    &::-ms-clear{display: none;}
+
+}
+
+textarea{
+    min-height: 2em;
+    padding: 3px 5px;
+    color: @m-input-color;
+}
+
+
+//=====================select start==========
+select{
+    padding-right: 25px;
+    padding-right: 0px\9 !important;  //hack ie9 padding
+    overflow: hidden;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAjCAYAAACOysqWAAAABGdBTUEAALGPC/xhBQAAAOJJREFUSA3tlUEKwyAQRWPtBbrOvmfoJbrtGcQKPU0lh8kBeobsBXc9QBqtUyTEMKhZhG5GEJzxzx/zDNgYY3yz4zjs6P2zpgZFwoSIEBUJFAX0F/0f0bF0hK7rnowxmdN577UQ4o5pipdsrX2Ewh4rjrk+alAJgwenbVuG7sak1vrEOX+F8LzSDdM0XaSU71V+DotfAEowGMfxGlDMRrCGXM4caqsagFApNTjnbsH4AxPWkIO97Nj6JodLlzCzpsvNrQ2WtTXrakQ1ZpiGGmBUkhwhSnBgASHCqCQ5QpTgwIIvZfZR8hngel0AAAAASUVORK5CYII=") no-repeat right center @m-select-bg;
+    background: #fff\9; //hack ie9/ie10 ; 使用@white编译不过
+    outline: none;
+    // fix: FF下虚线:聚焦指示
+    &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 #000;
+    }
+}
+
+// fix ie下面的丑爆的样式~
+select::-ms-expand {
+    display: none;
+}
+
+
+// 图片样式
+.img-upload{
+    position: relative;
+    overflow: hidden;
+    .upload-tipbar {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        line-height: 1.5;
+        text-align: center;
+        color: #fff;
+        background-color: rgba(0, 0, 0, .5);
+        cursor: pointer;
+        .iconfont{
+            color: #fff;
+        }
+    }
+    .upload-add {
+        height: 100px;
+        line-height: 100px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        color: #999;
+        background-color: #fff;
+        text-align: center;
+        &:hover {
+            color: #555;
+            border-color: #777;
+        }
+        .upload-text {
+            font-size: 18px;
+            vertical-align: middle;
+        }
+    }
+    .upload-loading{
+        display: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, .5);
+        .upload-waiting {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1em;
+            margin: auto;
+            text-align: center;
+            color: #fff;
+        }
+        &.uploading{
+            display: block;
+        }
+    }
+}
+
+
+@import './_mpanel.less';

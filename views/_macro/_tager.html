@@ -1,0 +1,12 @@
+{# style 引入器，使用时从项目根目录开始写即可，如/act/xx/x #}
+{% macro style(filePath) %}
+	{% set filePath = '../../..'+filePath.split('?')[0] %}
+    <style> {% include filePath raw ignore missing %} </style>
+{% endmacro %}
+
+
+{# script 引入器，使用时从项目根目录开始写即可，如/act/xx/x #}
+{% macro script(filePath) %}
+	{% set filePath = '../../..'+filePath.split('?')[0] %}
+    <script> {% include filePath raw ignore missing %} </script>
+{% endmacro %}

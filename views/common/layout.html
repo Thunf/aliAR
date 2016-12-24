@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+{% spaceless %}
+<head>
+
+    {% include "../_macro/index.html" %}
+
+    {% include "head.html" %}
+
+    {% block "block_custom_css" %}{% endblock %}
+</head>
+<body class="body">
+
+    {% block "content" %}{% endblock %}
+
+    {% include "footer.html" %}
+
+    {% block "block_custom_js" %}{% endblock %}
+
+</body>
+{% endspaceless %}
+</html>

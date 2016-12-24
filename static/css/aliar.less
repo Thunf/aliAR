@@ -1,0 +1,48 @@
+.body{
+    position: relative;
+    padding: 0;
+    overflow: auto;
+}
+
+.mpanel-reset{
+    min-width: auto;
+    margin: 10px;
+}
+
+.img-upload{
+    input[type="file"]{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        opacity: 0;
+    }
+}
+
+.processing-mask{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    text-align: center;
+    line-height: 1.5;
+    margin: auto;
+
+    .processing-text{
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 1.5em;
+        margin: auto;
+    }
+
+}

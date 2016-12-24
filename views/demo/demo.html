@@ -1,0 +1,83 @@
+{% extends "../common/layout.html" %} 
+
+{% block "block_custom_css" %}
+
+{{tager.style('/act_platform/static/css/common/bootstrap.css')}}
+{{tager.style('/act_platform/static/css/common/common.css')}}
+{{tager.style('/act_platform/static/css/company/aliar.css')}}
+
+{% endblock %} 
+
+{% block "block_custom_js" %}
+<script src="{{constant.cdn}}/act_platform/static/js/common/jquery.min.js"></script>
+<script src="{{constant.cdn}}/act_platform/static/js/company/alloyimage.js"></script>
+<script src="{{constant.cdn}}/act_platform/static/js/company/aliar.js"></script>
+{% endblock %} 
+
+{% block "content" %}   
+
+    <div class="mpanel mpanel-reset">
+        <div class="mpanel-heading">
+            <ul class="heading-tabs tabs-single">
+                <li class="tabs-list "> <a class="tab" href="javascript:void(0)"> ali AR </a></li>
+            </ul>
+            <span class="heading-tips">
+                <span>&emsp; 🔥 可批量选择图片</span>
+            </span>
+        </div>
+        <div class="mpanel-body">
+            <div class="mpanel-body-wrapper">
+
+                <div class="img-upload width-20">
+                    <div class="upload-add">
+                        <span class="upload-text"> 👆点击选择图片</span>
+                    </div>
+                    <input id="input-file" type="file" multiple="multiple">
+                </div>
+
+                <div class="fix-image-space" style="display: none;">
+                    <div class="padding-top-1">
+                        <span>🌚 满脸黑线？换个间隔看一下效果吧</span>
+                    </div>
+                    <select name="input-select" id="input-select">
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6" selected>6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+
+                <hr>
+
+                <div id="image-wrapper"></div>
+
+                <hr>
+
+                <div>
+                    <p>⚠️ 1、随便找几个红包过把瘾就好，好好工作；<br>&emsp; 
+                         2、前一句说的对；<br>&emsp; 
+                         3、该方案仅供技术交流；</p>
+                    <p>㊙️ 小哥掐指一算：<br>&emsp; 
+                         1、人脸和室内AR扫描秒开；<br>&emsp; 
+                         2、地板天花板桌子面颜色单一高光墙裂还有各种神秘不可名状的物品的图片比较难扫出来；</p>
+                    <p>❓ 为啥扫不出来：<br>&emsp; 
+                         1、多换几个姿势并集中注意力；<br>&emsp; 
+                         2、放下手机该干嘛干嘛去；</p>
+                    <p>💢 还是扫不出来：呵呵哒</p>
+                    <p>☕️  <a href="//thunf.me/about" target="_blank">找到大红包，还想请小哥喝杯咖啡？点这</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="processing-mask">
+        <span class="processing-text">
+            <span>处理中，请稍后...</span>
+            <br>
+            <span>若一次选取过多图片，处理时间会很长哦~</span>
+        </span>
+    </div>
+
+{% endblock %}
+
