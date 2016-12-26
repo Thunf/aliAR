@@ -3,27 +3,36 @@
 
 > 少抢怡情，多抢伤身，强抢灰飞烟灭，年轻人抢红包要节制😂
 
+> 2016-12-26 AR线索图一直在更新策略，现在似乎不太好用了，有时间再优化试试
+
+
 ## Usage
 
+> 页面需在koa-grace下运行，所以请先安装koa-grace，很简单的~ [koa-grace是什么，如何使用？点我查看](https://github.com/xiongwilee/koa-grace#二快速开始)
+ 
 ```node
-git clone git@github.com:Thunf/aliAR.git ali
-cd ali/
+// ~/fe为koa-grace根目录
+cd ~/fe/app/
+
+git clone git@github.com:Thunf/aliAR.git aliar
+cd aliar/
 
 npm i 
 
-grace -s ali
 npm run dev
 
 ```
 
-> ### [koa-grace是什么，如何使用？点我查看](https://github.com/xiongwilee/koa-grace)
 
 ## Page Usage
 ![Usage](http://7xrhcw.com1.z0.glb.clouddn.com/201612251482611934585edcde136d3.gif)
 
 
+## Blog
+[如何优雅的在家抢邻居的红包](http://thunf.me/2016/12/25/20161225-ali-ar/)
+
+
 ## THANKS
- 
 本方案使用了`AlloyTeam`开源的[基于HTML5的专业级图像处理开源引擎: AlloyImage](https://github.com/AlloyTeam/AlloyImage) 👍
  
   

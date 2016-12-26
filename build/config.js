@@ -2,7 +2,7 @@
 
 const path = require('path')
 
-const mod = 'grace_boilerplate';
+const mod = 'aliar';
 const app = path.resolve(__dirname, `../../../server/app/${mod}`);
 
 module.exports = {

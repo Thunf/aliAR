@@ -32,7 +32,7 @@
                 var _img = new Image();
                 _img.onload = _img.onerror = function(){
 
-                    AlloyImage.useWorker('/act_platform/static/js/company/alloyimage.js');
+                    AlloyImage.useWorker('/aliar/static/js/demo/alloyimage.js');
                     AlloyImage(this)
                         .add(AlloyImage(this) , '变亮', 0, +_space.val() || 6)
                         .act('brightness', 0, 5)
