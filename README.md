@@ -25,6 +25,17 @@ npm run dev
 
 
 ## Page Usage
+
+### 2台手机随时抢红包
+
+- Step1: A手机截图
+- Step2: 扫`下方二维码码`打开页面，点击“选择图片”并选择截图
+- Step2: B手机打开支付宝AR红包扫一扫，红包出现~
+
+![二维码](http://7xrhcw.com1.z0.glb.clouddn.com/aliar_usage.jpg)
+
+
+### PC使用示意
 ![Usage](http://7xrhcw.com1.z0.glb.clouddn.com/201612251482611934585edcde136d3.gif)
 
 
